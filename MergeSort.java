@@ -4,7 +4,7 @@ public class MergeSort {
 
     
     public static void main(String[] args) {
-        int[] array = { 5, 1, 6, 2, 3, 4 };
+        int[] array = {21, 12, 33, 22, 1, 77};
         MergeSort.mergeSort(array, array.length);
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
@@ -41,17 +41,25 @@ public class MergeSort {
     int k = 0;
     while (i < left && j < right) {
         if (newArray[i] <= newArray2[j]) {
-            array[k++] = newArray[i++];
+            array[k] = newArray[i];
+            k++;
+            i++;
         }
         else {
-            array[k++] = newArray2[j++];
+            array[k] = newArray2[j];
+            k++;
+            j++;
         }
     }
     while (i < left) {
-        array[k++] = newArray[i++];
+        array[k] = newArray[i];
+        k++;
+        i++;
     }
     while (j < right) {
-        array[k++] = newArray2[j++];
+        array[k] = newArray2[j];
+        k++;
+        j++;
     }
 }
         
