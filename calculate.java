@@ -10,7 +10,7 @@ public class calculate {
     private static Logger logger = Logger.getLogger(calculate.class.getName());
 
     public static void someMethod() throws SecurityException, IOException{
-        FileHandler fh = new FileHandler("calc.log");
+        FileHandler fh = new FileHandler("calc.log", true);
         logger.addHandler(fh);
         SimpleFormatter sFormat = new SimpleFormatter ();
         fh.setFormatter(sFormat); 
