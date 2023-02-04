@@ -16,8 +16,8 @@ public class sorted {
 
     public static void main(String[] args) throws IOException {
         someMethod(); 
-        int[] arr = new int[]{1, 12, 17, 22, 2, 4, 1, 5, 6}; 
-        bubbleSort(arr);
+        int[] arrayNum = new int[]{1, 12, 17, 22, 2, 4, 1, 5, 6}; 
+        bubbleSort(arrayNum);
     }
     
 

@@ -33,7 +33,6 @@ public class calculate {
                     logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
                     logger.info("Результат сложения " + result);
-                    System.out.println("Результат сложения " + result);
                     break;
                 case 2:
                     logger.info("Выбранна операция вычитание ");
@@ -43,7 +42,6 @@ public class calculate {
                     logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
                     logger.info("Результат сложения " + result);
-                    System.out.println("Результат вычитания " + result);
                     break;
                 case 3:
                     logger.info("Выбранна операция умножение ");
@@ -53,7 +51,6 @@ public class calculate {
                     logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
                     logger.info("Результат сложения " + result);
-                    System.out.println("Результат умножения " + result);
                     break;
                 case 4:
                     logger.info("Выбранна операция деление ");
@@ -63,7 +60,6 @@ public class calculate {
                     logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
                     logger.info("Результат сложения " + result);
-                    System.out.println("Результат деления " + result);
                     break;
                 case 5:
                     logger.info("Работа приложения завершена!!!");
