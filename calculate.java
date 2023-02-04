@@ -1,45 +1,75 @@
 import java.util.Scanner;
+import java.io.IOException;
+import java.util.logging.*;
 
 // Реализовать простой калькулятор
+// добавить логирование
 
 public class calculate {
     
+    private static Logger logger = Logger.getLogger(calculate.class.getName());
+
+    public static void someMethod() throws SecurityException, IOException{
+        ConsoleHandler ch = new ConsoleHandler();
+        logger.addHandler(ch);
+        SimpleFormatter sFormat = new SimpleFormatter ();
+        ch.setFormatter(sFormat); 
+    }
+
+
     public static void main(String[] args) {
+        logger.info("Start program ");
         float numA = 0;
         float numB = 0;
         double result = 0;
         while (true) {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("\nВведите команду:\n1.Сложение\n2.Вычитание\n3.Умножение\n4.Деление\n5.Завершить работу");
-            int command = scan.nextInt();
+            int command = inputNumber("Выберите номер команды\n1.Сложение\n2.Вычитание\n3.Умножение\n4.Деление\n5.Завершить работу\n");
             switch (command) {
                 case 1:
-                    numA = inputNumber("a");
-                    numB = inputNumber("b");
+                    logger.info("Выбранна операция сложение ");
+                    numA = inputNumber("Введите число a ");
+                    logger.info("Введенно число " + numA);
+                    numB = inputNumber("Введите число b ");
+                    logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
+                    logger.info("Результат сложения " + result);
                     System.out.println("Результат сложения " + result);
                     break;
                 case 2:
-                    numA = inputNumber("a");
-                    numB = inputNumber("b");
+                    logger.info("Выбранна операция вычитание ");
+                    numA = inputNumber("Введите число a ");
+                    logger.info("Введенно число " + numA);
+                    numB = inputNumber("Введите число b ");
+                    logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
+                    logger.info("Результат сложения " + result);
                     System.out.println("Результат вычитания " + result);
                     break;
                 case 3:
-                    numA = inputNumber("a");
-                    numB = inputNumber("b");
+                    logger.info("Выбранна операция умножение ");
+                    numA = inputNumber("Введите число a ");
+                    logger.info("Введенно число " + numA);
+                    numB = inputNumber("Введите число b ");
+                    logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
+                    logger.info("Результат сложения " + result);
                     System.out.println("Результат умножения " + result);
                     break;
                 case 4:
-                    numA = inputNumber("a");
-                    numB = inputNumber("b");
+                    logger.info("Выбранна операция деление ");
+                    numA = inputNumber("Введите число a ");
+                    logger.info("Введенно число " + numA);
+                    numB = inputNumber("Введите чилсо b ");
+                    logger.info("Введенно число " + numB);
                     result = operationResalt(numA, numB, command);
+                    logger.info("Результат сложения " + result);
                     System.out.println("Результат деления " + result);
                     break;
                 case 5:
+                    logger.info("Работа приложения завершена!!!");
                     return;
                 default:
+                    logger.warning("Введены некорректные данные ");
                     System.out.println("Вы ввели не верную команду попробуйте ещё раз");
                     break;
             }
@@ -48,7 +78,7 @@ public class calculate {
 
     static Integer inputNumber(String str) {
         Scanner scan = new Scanner(System.in);
-        System.out.printf("введите число %S ", str);
+        System.out.print(str);
         int num = scan.nextInt();
         return num;
     }

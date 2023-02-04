@@ -6,7 +6,7 @@ public class hw3 {
     public static void main(String[] args) {
         while (true) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("Введите команду:\n1.Что бы вычеслить n-ое треугольного числа\n2.Что бы вычислить факторил числа n\n3.Завершить работу");
+            System.out.println("Введите команду:\n1.Что бы вычеслить n-ое треугольного числа\n2.Что бы вычислить факториал числа n\n3.Завершить работу");
             int num = scan.nextInt();
             switch (num) {
                 case 1:
