@@ -10,14 +10,19 @@ public class calculate {
     private static Logger logger = Logger.getLogger(calculate.class.getName());
 
     public static void someMethod() throws SecurityException, IOException{
-        ConsoleHandler ch = new ConsoleHandler();
-        logger.addHandler(ch);
+        FileHandler fh = new FileHandler("calc.log");
+        logger.addHandler(fh);
         SimpleFormatter sFormat = new SimpleFormatter ();
-        ch.setFormatter(sFormat); 
+        fh.setFormatter(sFormat); 
     }
 
 
     public static void main(String[] args) {
+        try {
+            someMethod();
+        } catch (SecurityException | IOException e) {
+            e.printStackTrace();
+        }
         logger.info("Start program ");
         float numA = 0;
         float numB = 0;
