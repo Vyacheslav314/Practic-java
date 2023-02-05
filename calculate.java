@@ -17,12 +17,9 @@ public class calculate {
     }
 
 
-    public static void main(String[] args) {
-        try {
-            someMethod();
-        } catch (SecurityException | IOException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) throws SecurityException, IOException {
+       
+        someMethod();
         logger.info("Start program ");
         float numA = 0;
         float numB = 0;
